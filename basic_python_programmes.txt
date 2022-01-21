@@ -1,0 +1,463 @@
+'''
+
+#1.python program to do airthematic calculations using functions
+
+
+def add(a,b):     #defining the function and taking two inputs
+    r1=a+b       #adding the two numbers
+    return r1    #value is returned
+
+
+def sub(a,b):
+    r2=a-b
+    return r2
+
+def mul(a,b):
+    r3=a*b
+    return r3
+
+def div(a,b):
+    r4=a/b
+    return r4
+
+
+res1=add(10, 20)     #calling the function and stored in the variable which is returned
+print(res1)          #printing the result
+
+res2=sub(100, 20)
+print(res2)
+
+res3=mul(15, 24)
+print(res3)
+
+res4=div(60, 2)
+print(res4)  
+
+'''
+
+
+'''
+#2.#python prgram to swap two numbers
+
+def swap(a,b):     #defining the function
+    print(a)      #printing before swapping
+    print(b)
+    a,b=b,a       #swapping of two numbers condition
+    print(a)     #printing after swapped
+    print(b)
+    
+swap(10,65)  
+
+
+#2.#python prgram to swap two numbers by third variablee
+
+def swap(a,b):
+    print(a)
+    print(b)
+    temp=a           #storing a in the temp variable
+    a=b              #b is assigned to the a ,here b is stored in the a
+    b=temp           #temp var is assined to the b,here a is stored in the b
+    print(a)
+    print(b)
+    
+swap(25, 52)    
+    
+'''    
+
+
+Get Started With Python: Learn how to use IDLE to run Python code interactively. Also, understand syntax and indentation in Python.
+
+Python Statements: A statement is an instruction that a Python interpreter can execute. Learn simple statements and compound statements.
+
+Python Comments: Comments are descriptions that help programmers to understand the functionality of the program. Learn how to add comments in your Python code. Use inline comments, block comments, and multi-line comments.
+
+Python Keywords: Python keywords are reserved words that have a special meaning associated with them and can’t be used for anything but those specific purposes.
+
+Python Operators: Python has several operators that we can use to perform different mathematical, logical, and boolean operations on data.
+'''
+  
+#3.python prgram to count the number of digits
+
+def num(number):
+    count=0                  #count is intialized to 0
+    while(number>0):         #checking the condition number is greater than 0
+        number=number//10    #floor division is done and stored in the same variable
+        count=count+1       #after divsion count value is increased by 1
+    print(count)    
+        
+num(123)   
+
+'''
+
+'''
+#4.python prgram to find the factorial of a number
+
+def num(number):
+    fact=1
+    for i in range(1,number+1):
+        fact=fact*i
+    return fact
+
+
+res=num(5)
+print(res)    
+'''
+
+
+
+'''
+
+#5.factors of given number
+
+def fact(num):
+    i=1
+    while(i<=num):
+        if (num%i==0):  #if the numbeer is divided by a number then it is a factor
+            print(i)
+        i=i+1
+integer=int(input('enter the number:'))
+fact(integer)  
+      
+'''     
+       
+Exercise 1: Calculate the multiplication and sum of two numbers
+Given two integer numbers return their product only if the product is greater than 1000, else return their sum.
+
+
+Given 1:
+
+number1 = 20
+number2 = 30
+Expected Output:
+
+The result is 600
+Given 2:
+
+number1 = 40
+number2 = 30
+Expected Output:
+
+The result is 70
+
+def multiplication_or_sum(num1, num2):
+    # calculate product of two number
+    product = num1 * num2
+    # check if product is less then 1000
+    if product <= 1000:
+        return product
+    else:
+        # product is greater than 1000 calculate sum
+        return num1 + num2
+
+# first condition
+result = multiplication_or_sum(20, 30)
+print("The result is", result)
+
+# Second condition
+result = multiplication_or_sum(40, 30)
+print("The result is", result)
+
+
+Exercise 2: Print the sum of the current number and the previous number
+Write a program to iterate the first 10 numbers and in each iteration, print the sum of the current and previous number.
+
+Expected Output:
+
+Printing current and previous number sum in a range(10)
+Current Number 0 Previous Number  0  Sum:  0
+Current Number 1 Previous Number  0  Sum:  1
+Current Number 2 Previous Number  1  Sum:  3
+Current Number 3 Previous Number  2  Sum:  5
+Current Number 4 Previous Number  3  Sum:  7
+Current Number 5 Previous Number  4  Sum:  9
+Current Number 6 Previous Number  5  Sum:  11
+Current Number 7 Previous Number  6  Sum:  13
+Current Number 8 Previous Number  7  Sum:  15
+Current Number 9 Previous Number  8  Sum:  17
+
+
+#code
+prev=0
+for i in range(10):
+    print('current value',i,'previous value',prev,'sum is ',i+prev)
+    prev=i
+    
+    
+Output 
+current value 0 previous value 0 sum is  0
+current value 1 previous value 0 sum is  1
+current value 2 previous value 1 sum is  3
+current value 3 previous value 2 sum is  5
+current value 4 previous value 3 sum is  7
+current value 5 previous value 4 sum is  9
+current value 6 previous value 5 sum is  11
+current value 7 previous value 6 sum is  13
+current value 8 previous value 7 sum is  15
+current value 9 previous value 8 sum is  17
+
+Executed in: 0.02 sec(s)
+Memory: 4160 kilobyte(s)
+
+
+
+
+Exercise 3: Print characters from a string that are present at an even index number
+Write a program to accept a string from the user and display characters that are present at an even index number.
+
+For example, str = "pynative" so you should display ‘p’, ‘n’, ‘t’, ‘v’.
+
+Expected Output:
+
+Orginal String is  pynative
+Printing only even index chars
+p
+n
+t
+v
+
+
+
+#Enter Python code here and hit the Run button.
+var=input("enter the string")
+print('\n')
+for i in var[0:len(var):2]:
+    print(i)
+    
+enter the string
+
+s
+i
+a
+t
+
+Executed in: 0.017 sec(s)
+Memory: 4164 kilobyte(s)
+
+
+
+
+Exercise 4: Remove first n characters from a string
+Write a program to remove characters from a string starting from zero up to n and return a new string.
+
+For example:
+
+remove_chars("pynative", 4) so output must be tive. Here we need to remove first four characters from a string.
+remove_chars("pynative", 2) so output must be native. Here we need to remove first two characters from a string.
+Note: n must be less than the length of the string.
+
+
+
+def remove_chars(word, n):
+    print('Original string:', word)
+    x = word[n:]
+    return x
+
+print("Removing characters from a string")
+print(remove_chars("pynative", 4))
+print(remove_chars("pynative", 2))
+
+
+Exercise 5: Check if the first and last number of a list is the same
+Write a function to return True if the first and last number of a given list is same. If numbers are different then return False.
+
+Given:
+
+numbers_x = [10, 20, 30, 40, 10]
+numbers_y = [75, 65, 35, 75, 30]
+Expected Output:
+
+Given list: [10, 20, 30, 40, 10]
+result is True
+
+numbers_y = [75, 65, 35, 75, 30]
+result is False
+
+
+
+list=[10,20,40,50,45,45,10]
+
+if list[0]==list[len(list)-1]:
+     print("true")
+else:
+     print('false')
+    
+true
+
+Executed in: 0.029 sec(s)
+Memory: 4164 kilobyte(s)
+
+
+def first_last_same(numberList):
+    print("Given list:", numberList)
+    
+    first_num = numberList[0]
+    last_num = numberList[-1]
+    
+    if first_num == last_num:
+        return True
+    else:
+        return False
+
+numbers_x = [10, 20, 30, 40, 10]
+print("result is", first_last_same(numbers_x))
+
+numbers_y = [75, 65, 35, 75, 30]
+print("result is", first_last_same(numbers_y))
+
+
+
+Exercise 6: Display numbers divisible by 5 from a list
+Iterate the given list of numbers and print only those numbers which are divisible by 5
+
+Expected Output:
+
+Given list is  [10, 20, 33, 46, 55]
+Divisible by 5
+10
+20
+55
+
+
+def fun(list):
+    for i in list:
+        if i%5==0:
+            print(i)
+list=[10,20,50,4,6,78]
+fun(list)
+            
+
+10
+20
+50
+
+Executed in: 0.016 sec(s)
+Memory: 4160 kilobyte(s)
+
+
+
+num_list = [10, 20, 33, 46, 55]
+print("Given list:", num_list)
+print('Divisible by 5:')
+for num in num_list:
+    if num % 5 == 0:
+        print(num)
+
+Exercise 7: Return the count of a given substring from a string
+Write a program to find how many times substring “Emma” appears in the given string.
+
+
+#Enter Python code here and hit the Run button.
+
+
+str="emma is good girl emma"
+res=str.count('emma')
+print('emma occured',res,'times')
+
+emma occured 2 times
+
+Executed in: 0.021 sec(s)
+Memory: 4084 kilobyte(s)
+
+
+
+
+Solution 1: Use the count() method
+
+str_x = "Emma is good developer. Emma is a writer"
+# use count method of a str class
+cnt = str_x.count("Emma")
+print(cnt)
+
+
+
+
+Solution 2: Without string method
+
+def count_emma(statement):
+    print("Given String: ", statement)
+    count = 0
+    for i in range(len(statement) - 1):
+        count += statement[i: i + 4] == 'Emma'
+    return count
+
+count = count_emma("Emma is good developer. Emma is a writer")
+print("Emma appeared ", count, "times")
+
+
+
+
+
+
+
+
+
+
+Exercise 10: Create a new list from a two list using the following condition
+Create a new list from a two list using the following condition
+
+Given a two list of numbers, write a program to create a new list such that the new list should contain odd numbers from the first list and even numbers from the second list.
+
+Given:
+
+list1 = [10, 20, 25, 30, 35]
+list2 = [40, 45, 60, 75, 90]
+Expected Output:
+
+result list: [25, 35, 40, 60, 90]
+
+
+
+
+list1=[1,2,45,4,6]
+list2=[12,45,44,14,63]
+new=[]
+
+for i in list1:
+    if i%2!=0:
+        new.append(i)
+        
+for i in list2:
+    if i%2==0:
+        new.append(i)
+        
+print(new)        
+
+
+[1, 45, 12, 44, 14]
+
+Executed in: 0.013 sec(s)
+Memory: 4164 kilobyte(s)
+        
+
+
+def merge_list(list1, list2):
+    result_list = []
+    
+    # iterate first list
+    for num in list1:
+        # check if current number is odd
+        if num % 2 != 0:
+            # add odd number to result list
+            result_list.append(num)
+    
+    # iterate second list
+    for num in list2:
+        # check if current number is even
+        if num % 2 == 0:
+            # add even number to result list
+            result_list.append(num)
+    return result_list
+
+list1 = [10, 20, 25, 30, 35]
+list2 = [40, 45, 60, 75, 90]
+print("result list:", merge_list(list1, list2))
+
+
+
+
+
+
+
+
+
+
